@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #05CBE9;
+    --background-color: #111D4A;
+
+    /* small scren font-size */
+    --ss-title: 1.75rem;
+    --ss-body: 1rem;
+    --ss-button: 1.25rem;
+    
+    /* big scren font-size */
+    --bs-title: 2.25rem;
+    --bs-body: 1.125rem;
+    --bs-button: 1.25rem;
+}
+
+html, body {
+    box-sizing: border-box;
+    font-family: 'Blinker', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 320px;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    box-shadow: 25px 45px 80px #111d4a93;
+}
+
+.card-img {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: 194px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.container {
+    padding: 26px 2.25rem 2rem; 
+}
+
+h1 {
+    font-size: var(--ss-title);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.paragraph {
+    color: rgba(255, 255, 255, 0.801);
+    font-size: var(--ss-body);
+    font-family: 'PT Sans', sans-serif;
+    line-height: 28px;
+    margin-bottom: 45px;
+}
+
+.bottom-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    height: 76px;
+    /* margin-top: auto; */
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.left p {
+    font-weight: bold;
+    margin-bottom: auto;
+    font-size: 1.76rem;
+}
+
+.btn {
+    padding: 0.6rem 2.215rem;
+    margin-top: auto;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+    .card {
+        width: 100%;
+        display: flex;
+        max-width: 771px;
+        height: 390px;
+    }
+    .card-img {
+        display: block;
+        height: 100%;
+        object-fit:fill;
+        width: 100%;
+        border-radius: 1rem 0rem 0 1rem;
+         width: 42%;
+        object-fit: cover;
+    }
+    .container {
+        padding: 28px 36px 41px 29px;
+
+    }
+    h1 {
+        font-size: var(--bs-title);
+    }
+    .paragraph {
+        font-size: var(--bs-body);
+    }
+}
